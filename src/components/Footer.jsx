@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { CONTACT_DETAILS } from '../data/websiteData';
-import { Shield, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const InstagramIcon = () => (
   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -26,36 +26,38 @@ const FacebookIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-ragda-secondary border-t border-ragda-border-subtle mt-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(245,158,11,0.02),transparent_70%)]"></div>
+    <footer className="bg-slate-950 border-t border-slate-900 mt-20 relative overflow-hidden text-slate-400">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(37,99,235,0.03),transparent_70%)]"></div>
 
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand Profile */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-3">
-              <div className="bg-amber-500/10 border border-amber-500/30 p-2 rounded-xl text-amber-500">
-                <Shield className="w-5 h-5" />
+              <div className="bg-blue-600/10 border border-blue-600/20 p-2 rounded-xl text-blue-500">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
               </div>
               <div>
                 <h3 className="text-sm font-extrabold tracking-tight text-white leading-none">RAGDALION</h3>
-                <p className="text-[9px] text-slate-500 font-bold uppercase mt-1 tracking-widest">Technology</p>
+                <p className="text-[9px] text-blue-500 font-bold uppercase mt-1 tracking-widest">Technology</p>
               </div>
             </Link>
 
-            <p className="text-xs text-ragda-text-muted leading-relaxed">
+            <p className="text-xs leading-relaxed text-slate-400">
               PT Ragdalion Revolusi Industri is a digital transformation partner specializing in software development, IoT, AI, system integration, and industrial digital solutions.
             </p>
 
             {/* Social Links */}
             <div className="flex gap-3">
-              <a href={CONTACT_DETAILS.instagram} target="_blank" rel="noreferrer" className="p-2.5 bg-slate-950/80 rounded-xl border border-ragda-border-subtle text-ragda-text-muted hover:text-amber-500 hover:border-amber-500/40 transition-all">
+              <a href={CONTACT_DETAILS.instagram} target="_blank" rel="noreferrer" className="p-2.5 bg-slate-900 rounded-xl border border-slate-800 text-slate-400 hover:text-blue-500 hover:border-blue-500/40 transition-all">
                 <InstagramIcon />
               </a>
-              <a href={CONTACT_DETAILS.linkedin} target="_blank" rel="noreferrer" className="p-2.5 bg-slate-950/80 rounded-xl border border-ragda-border-subtle text-ragda-text-muted hover:text-amber-500 hover:border-amber-500/40 transition-all">
+              <a href={CONTACT_DETAILS.linkedin} target="_blank" rel="noreferrer" className="p-2.5 bg-slate-900 rounded-xl border border-slate-800 text-slate-400 hover:text-blue-500 hover:border-blue-500/40 transition-all">
                 <LinkedinIcon />
               </a>
-              <a href={CONTACT_DETAILS.facebook} target="_blank" rel="noreferrer" className="p-2.5 bg-slate-950/80 rounded-xl border border-ragda-border-subtle text-ragda-text-muted hover:text-amber-500 hover:border-amber-500/40 transition-all">
+              <a href={CONTACT_DETAILS.facebook} target="_blank" rel="noreferrer" className="p-2.5 bg-slate-900 rounded-xl border border-slate-800 text-slate-400 hover:text-blue-500 hover:border-blue-500/40 transition-all">
                 <FacebookIcon />
               </a>
             </div>
@@ -64,7 +66,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="space-y-4">
             <h4 className="text-[10px] text-white uppercase font-extrabold tracking-wider">Quick Links</h4>
-            <ul className="space-y-2.5 text-xs text-ragda-text-muted">
+            <ul className="space-y-2.5 text-xs">
               <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/products" className="hover:text-white transition-colors">Products & Services</Link></li>
@@ -77,8 +79,8 @@ export default function Footer() {
           {/* Solutions Links */}
           <div className="space-y-4">
             <h4 className="text-[10px] text-white uppercase font-extrabold tracking-wider">Solutions</h4>
-            <ul className="space-y-2.5 text-xs text-ragda-text-muted">
-              <li><Link to="/products" className="hover:text-white transition-colors">Software Development</Link></li>
+            <ul className="space-y-2.5 text-xs">
+              <li><Link to="/products" className="hover:text-white transition-colors">Customized Software</Link></li>
               <li><Link to="/products" className="hover:text-white transition-colors">System Integration 4.0</Link></li>
               <li><Link to="/products" className="hover:text-white transition-colors">Internet of Things</Link></li>
               <li><Link to="/products" className="hover:text-white transition-colors">Artificial Intelligence</Link></li>
@@ -89,38 +91,38 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="space-y-4">
               <h4 className="text-[10px] text-white uppercase font-extrabold tracking-wider">Contact Info</h4>
-              <ul className="space-y-2.5 text-xs text-ragda-text-muted">
-                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-amber-500 shrink-0" /> {CONTACT_DETAILS.address}</li>
-                <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-amber-500 shrink-0" /> {CONTACT_DETAILS.email}</li>
-                <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-amber-500 shrink-0" /> {CONTACT_DETAILS.phone}</li>
+              <ul className="space-y-2.5 text-xs">
+                <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" /> {CONTACT_DETAILS.address}</li>
+                <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-blue-500 shrink-0" /> {CONTACT_DETAILS.email}</li>
+                <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-blue-500 shrink-0" /> {CONTACT_DETAILS.phone}</li>
               </ul>
             </div>
 
             {/* Certifications (ISO 27001 & ISO 9001) */}
-            <div className="flex gap-4 border-t border-ragda-border-subtle pt-4">
+            <div className="flex gap-4 border-t border-slate-900 pt-4">
               <div className="flex items-center gap-2">
-                <div className="text-[9px] font-extrabold text-white bg-slate-900 border border-ragda-border-standard px-2 py-1 rounded">
+                <div className="text-[9px] font-extrabold text-white bg-slate-900 border border-slate-800 px-2 py-1 rounded">
                   ISO 27001
                 </div>
-                <div className="text-[8px] text-ragda-text-muted leading-none font-bold">INFO SECURITY</div>
+                <div className="text-[8px] text-slate-500 leading-none font-bold">INFO SECURITY</div>
               </div>
               <div className="flex items-center gap-2">
-                <div className="text-[9px] font-extrabold text-white bg-slate-900 border border-ragda-border-standard px-2 py-1 rounded">
+                <div className="text-[9px] font-extrabold text-white bg-slate-900 border border-slate-800 px-2 py-1 rounded">
                   ISO 9001
                 </div>
-                <div className="text-[8px] text-ragda-text-muted leading-none font-bold">QUALITY MGMT</div>
+                <div className="text-[8px] text-slate-500 leading-none font-bold">QUALITY MGMT</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-16 pt-8 border-t border-ragda-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-ragda-text-subtle font-medium">
+        <div className="mt-16 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-slate-600 font-medium">
           <p>&copy; {new Date().getFullYear()} PT Ragdalion Revolusi Industri. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="https://www.ragdalion.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">www.ragdalion.com</a>
             <span>|</span>
-            <Link to="/admin-inbox" className="hover:text-amber-500 transition-colors">Sales CRM Inbox</Link>
+            <Link to="/admin-inbox" className="hover:text-blue-500 transition-colors">Sales CRM Inbox</Link>
           </div>
         </div>
       </div>
